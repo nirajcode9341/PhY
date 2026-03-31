@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Education Hub | Class 9, 10, 11, 12 Notes</title>
+  <meta name="description" content="Physical Education study website for Class 9, 10, 11, and 12 with notes in Hindi and English, syllabus, MCQs, important questions, practicals, and PDF downloads." />
+  <meta name="keywords" content="Physical Education notes, class 9 physical education, class 10 physical education, class 11 physical education, class 12 physical education, Hindi notes, English notes, syllabus, MCQ" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1150px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+
+    .nav-wrap {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #facc15, #f59e0b);
+      color: #0f172a;
+      display: grid;
+      place-items: center;
+      font-size: 1.05rem;
+      font-weight: 800;
+      box-shadow: 0 10px 22px rgba(250, 204, 21, 0.28);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: #facc15; }
+
+    .nav-btn {
+      background: #facc15;
+      color: #0f172a;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(250, 204, 21, 0.28);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 28px;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      border-radius: 99px;
+      background: #fff;
+      transition: 0.3s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at top right, rgba(250, 204, 21, 0.18), transparent 24%), linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      padding: 76px 0 56px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(250, 204, 21, 0.13);
+      border: 1px solid rgba(250, 204, 21, 0.28);
+      color: #fde68a;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.7rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: #facc15; }
+
+    .hero p {
+      color: #cbd5e1;
+      max-width: 700px;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #facc15;
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(250, 204, 21, 0.26);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.13);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-stat {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 14px 18px;
+      border-radius: 18px;
+      min-width: 150px;
+    }
+
+    .hero-stat strong {
+      display: block;
+      color: #facc15;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 22px 48px rgba(15, 23, 42, 0.35);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 16px;
+      font-size: 1.25rem;
+      color: #facc15;
+    }
+
+    .subject-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .subject-item {
+      background: rgba(255,255,255,0.07);
+      padding: 14px 16px;
+      border-radius: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .subject-item span:last-child {
+      color: #fde68a;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* SECTION */
+    section { padding: 72px 0; }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-head .mini {
+      color: #f59e0b;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .section-head p {
+      color: #475569;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    /* QUICK ACCESS */
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .class-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      transition: 0.28s ease;
+    }
+
+    .class-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.1);
+    }
+
+    .class-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      color: #92400e;
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .class-card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+    .class-card p { color: #475569; margin-bottom: 18px; }
+
+    .class-card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      color: #334155;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .class-card .link {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* FEATURES */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .feature-card h3 {
+      margin: 14px 0 8px;
+      font-size: 1.15rem;
+    }
+
+    .feature-card p { color: #475569; }
+
+    .feature-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: #eff6ff;
+      font-weight: 800;
+      color: #1d4ed8;
+    }
+
+    /* CHAPTERS */
+    .chapters-wrap {
+      background: linear-gradient(135deg, #fff7ed, #ffffff);
+      border: 1px solid #fed7aa;
+      border-radius: 28px;
+      padding: 30px;
+    }
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .chapter-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .chapter-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .chapter-item p {
+      color: #475569;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 7px 12px;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: 30px;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-band h3 {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      margin-bottom: 12px;
+    }
+
+    .cta-band p { color: #cbd5e1; }
+
+    .search-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.18);
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      outline: none;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .search-box button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: #facc15;
+      color: #0f172a;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* RESOURCES */
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .resource-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .resource-card .num {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      background: #f8fafc;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .resource-card h3 { margin-bottom: 8px; }
+    .resource-card p { color: #475569; }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 18px 20px;
+      background: #fff;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 18px;
+      color: #475569;
+    }
+
+    .faq-item.active .faq-answer { display: block; }
+
+    /* FOOTER */
+    .footer {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 28px 0;
+      margin-top: 20px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover { color: #facc15; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .cta-band,
+      .class-grid,
+      .resource-grid,
+      .feature-grid,
+      .chapter-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .menu-toggle { display: flex; }
+
+      .nav-links {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 82px;
+        background: #0f172a;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+      }
+
+      .nav-links.show { display: flex; }
+
+      .hero-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 56px 0; }
+      .hero { padding: 58px 0 46px; }
+      .class-grid,
+      .resource-grid,
+      .feature-grid,
+      .chapter-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats { flex-direction: column; }
+      .cta-band, .chapters-wrap, .hero-card { padding: 22px; }
+      .footer-wrap { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">
+        <div class="logo-badge">PE</div>
+        <div>
+          <div>Physical Education Hub</div>
+        </div>
+      </a>
+
+      <nav>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" class="nav-btn">Download Notes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">Class 9 • 10 • 11 • 12 | Hindi + English</div>
+        <h1>Your complete <span>Physical Education</span> learning website for school students</h1>
+        <p>
+          Get chapter-wise notes, syllabus, important questions, MCQs, practical content, revision material,
+          and easy PDF downloads for Classes 9 to 12 — all in one clean and student-friendly platform.
+        </p>
+        <div class="hero-actions">
+          <a href="#classes" class="btn btn-primary">Explore Classes</a>
+          <a href="#resources" class="btn btn-secondary">View Resources</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>4 Classes</strong>
+            <span>Class 9 to 12 coverage</span>
+          </div>
+          <div class="hero-stat">
+            <strong>2 Languages</strong>
+            <span>Hindi and English notes</span>
+          </div>
+          <div class="hero-stat">
+            <strong>100% Useful</strong>
+            <span>Exam focused content</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>What students get here</h3>
+        <div class="subject-list">
+          <div class="subject-item"><span>Chapter-wise Notes</span><span>Easy to read</span></div>
+          <div class="subject-item"><span>Hindi & English Content</span><span>Dual language</span></div>
+          <div class="subject-item"><span>MCQs & Important Questions</span><span>Exam ready</span></div>
+          <div class="subject-item"><span>Practical & Viva Material</span><span>School support</span></div>
+          <div class="subject-item"><span>PDF Download Section</span><span>Quick access</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini">Quick Access</span>
+        <h2>Choose your class</h2>
+        <p>Each class section can contain syllabus, chapter-wise notes, MCQs, important questions, and downloadable PDFs.</p>
+      </div>
+
+      <div class="class-grid">
+        <div class="class-card">
+          <div class="class-icon">09</div>
+          <h3>Class 9</h3>
+          <p>Foundation notes with simple explanations for school students.</p>
+          <ul>
+            <li>✓ Chapter-wise notes</li>
+            <li>✓ Hindi + English</li>
+            <li>✓ MCQ practice</li>
+            <li>✓ Syllabus section</li>
+          </ul>
+          <a href="#" class="link">Open Class 9 →</a>
+        </div>
+
+        <div class="class-card">
+          <div class="class-icon">10</div>
+          <h3>Class 10</h3>
+          <p>Board-focused material with revision support and important questions.</p>
+          <ul>
+            <li>✓ Chapter summaries</li>
+            <li>✓ Important questions</li>
+            <li>✓ MCQ and short answers</li>
+            <li>✓ PDF download</li>
+          </ul>
+          <a href="#" class="link">Open Class 10 →</a>
+        </div>
+
+        <div class="class-card">
+          <div class="class-icon">11</div>
+          <h3>Class 11</h3>
+          <p>Detailed theory pages with chapter navigation and practical support.</p>
+          <ul>
+            <li>✓ Full theory notes</li>
+            <li>✓ Bilingual content</li>
+            <li>✓ Viva questions</li>
+            <li>✓ Revision resources</li>
+          </ul>
+          <a href="#" class="link">Open Class 11 →</a>
+        </div>
+
+        <div class="class-card">
+          <div class="class-icon">12</div>
+          <h3>Class 12</h3>
+          <p>Advanced exam preparation with notes, PYQs, and quick revision material.</p>
+          <ul>
+            <li>✓ Exam-focused notes</li>
+            <li>✓ Important diagrams</li>
+            <li>✓ Previous questions</li>
+            <li>✓ Downloadable PDFs</li>
+          </ul>
+          <a href="#" class="link">Open Class 12 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" style="background:#f1f5f9;">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini">Website Features</span>
+        <h2>Everything a student needs in one place</h2>
+        <p>This homepage is designed to make your website look modern, useful, and easy to explore on both desktop and mobile.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-badge">A</div>
+          <h3>Chapter-wise learning</h3>
+          <p>Students can open class pages and study chapter by chapter without confusion.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-badge">B</div>
+          <h3>Bilingual support</h3>
+          <p>Every topic can be added in both Hindi and English for better understanding.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-badge">C</div>
+          <h3>Exam preparation</h3>
+          <p>Add MCQs, important questions, sample papers, and revision notes for fast preparation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-badge">D</div>
+          <h3>PDF downloads</h3>
+          <p>Upload notes as PDFs so students can read them offline anytime they want.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-badge">E</div>
+          <h3>Practical & viva</h3>
+          <p>Useful practical files, project support, and viva questions can be added later.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-badge">F</div>
+          <h3>Responsive design</h3>
+          <p>The homepage works properly on mobile, tablet, and desktop screens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="mini">Sample Content</span>
+        <h2>How your chapters can be arranged</h2>
+        <p>This section gives a preview of how your content can be shown in a clean chapter card layout.</p>
+      </div>
+
+      <div class="chapters-wrap">
+        <h3 style="font-size:1.45rem; margin-bottom:8px;">Example: Class 10 Physical Education</h3>
+        <p style="color:#475569;">Each chapter can have notes, MCQs, important questions, short answers, long answers, and PDF download links.</p>
+
+        <div class="chapter-grid">
+          <div class="chapter-item">
+            <strong>Chapter 1: Physical Fitness</strong>
+            <p>Basic concepts, importance, and practical understanding of physical fitness.</p>
+            <div class="tag-row">
+              <span class="tag">Hindi</span>
+              <span class="tag">English</span>
+              <span class="tag">MCQ</span>
+            </div>
+          </div>
+          <div class="chapter-item">
+            <strong>Chapter 2: Yoga and Lifestyle</strong>
+            <p>Yoga benefits, healthy routine, and important school-level theory questions.</p>
+            <div class="tag-row">
+              <span class="tag">Notes</span>
+              <span class="tag">PDF</span>
+              <span class="tag">Revision</span>
+            </div>
+          </div>
+          <div class="chapter-item">
+            <strong>Chapter 3: Sports and Nutrition</strong>
+            <p>Food, nutrients, balanced diet, and sports performance basics in simple language.</p>
+            <div class="tag-row">
+              <span class="tag">Questions</span>
+              <span class="tag">MCQ</span>
+              <span class="tag">Bilingual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h3>Search chapters, notes, or topics quickly</h3>
+          <p>Add a real search system later so students can directly find chapters like Yoga, Fitness, Nutrition, Practical, or Viva questions.</p>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search chapter, syllabus, MCQ..." />
+          <button type="button">Search Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" style="background:#f8fafc;">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini">Resources</span>
+        <h2>Useful sections to add next</h2>
+        <p>These sections will make your website more complete, professional, and helpful for students.</p>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-card">
+          <div class="num">01</div>
+          <h3>Syllabus</h3>
+          <p>Class-wise updated syllabus in simple and downloadable format.</p>
+        </div>
+        <div class="resource-card">
+          <div class="num">02</div>
+          <h3>Important Questions</h3>
+          <p>Exam-oriented short and long answer questions chapter-wise.</p>
+        </div>
+        <div class="resource-card">
+          <div class="num">03</div>
+          <h3>MCQ Practice</h3>
+          <p>Practice sets for revision before tests and board exams.</p>
+        </div>
+        <div class="resource-card">
+          <div class="num">04</div>
+          <h3>PDF Notes</h3>
+          <p>Quick PDF downloads for offline study and revision anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini">FAQ</span>
+        <h2>Common student questions</h2>
+        <p>You can keep these FAQs on the homepage to help students understand the website quickly.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">Will this website provide notes in both Hindi and English? <span>+</span></button>
+          <div class="faq-answer">Yes, you can upload each chapter in Hindi and English so students can learn in the language they prefer.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can students download notes in PDF format? <span>+</span></button>
+          <div class="faq-answer">Yes, you can create a PDF download section for each chapter or class page.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Will there be syllabus and important questions? <span>+</span></button>
+          <div class="faq-answer">Yes, syllabus, important questions, MCQs, and revision notes can all be added class-wise.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is this website mobile friendly? <span>+</span></button>
+          <div class="faq-answer">Yes, this homepage is already designed to look good on phones, tablets, and desktop screens.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Physical Education Hub</strong><br />
+        <span>Class 9 to 12 study material in Hindi and English.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#resources">Resources</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
