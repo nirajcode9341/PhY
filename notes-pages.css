@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8ff;
+    color: #0f172a;
+}
+
+/* CONTAINER */
+.container {
+    width: min(1140px, calc(100% - 32px));
+    margin: auto;
+}
+
+/* TOPBAR */
+.topbar {
+    background: white;
+    padding: 14px 0;
+    border-bottom: 1px solid #dbe4f0;
+    position: sticky;
+    top: 0;
+}
+
+.topbar-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-btn {
+    background: #0f172a;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.class-badge {
+    background: #dbeafe;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    padding: 30px 0;
+}
+
+.hero-box {
+    background: linear-gradient(135deg, #ffffff, #eef4ff);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.hero-label {
+    background: #e0ecff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+/* SECTION */
+.notes-section {
+    padding: 50px 0;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.note-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #dbe4f0;
+}
+
+.note-number {
+    background: #dbeafe;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-btn {
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.open-btn {
+    background: #eef4ff;
+    color: #1d4ed8;
+}
+
+.download-btn-small {
+    background: #081635;
+    color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
